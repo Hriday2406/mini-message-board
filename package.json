@@ -4,14 +4,29 @@
   "description": "A simple message board using Express and ejs.",
   "main": "app.js",
   "scripts": {
+    "tailwind": "npx tailwindcss -i public/styles/tailwind.css -o public/styles/style.css --watch",
     "start": "node --watch app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.4.20",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "express-async-handler": "^1.2.0"
+    "express-async-handler": "^1.2.0",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
   }
 }
+
