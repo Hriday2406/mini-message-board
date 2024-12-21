@@ -27,6 +27,27 @@ const messages = [
     added: new Date(),
     // added: "15:35 - 21/12/2024",
   },
+  {
+    id: 4,
+    user: "Model",
+    text: "Nikhil Kya bollee hoo!! XD",
+    added: new Date(),
+    // added: "15:35 - 21/12/2024",
+  },
+  {
+    id: 5,
+    user: "Body Builder",
+    text: "Yaar tu mere se pyaar karti hai ya nahi karti T_T",
+    added: new Date(),
+    // added: "15:35 - 21/12/2024",
+  },
+  {
+    id: 6,
+    user: "Cycloid",
+    text: "Aaj mai shoulder maar ke aya hun :)",
+    added: new Date(),
+    // added: "15:35 - 21/12/2024",
+  },
 ];
 
 async function getMessages() {
