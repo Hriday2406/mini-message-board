@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mini Message Board</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="h-dvh text-white">
+    <%- include("header"); %>
+    <div
+      class="container mx-auto flex h-3/5 flex-col items-center justify-center"
+    >
+      <form
+        action="/new"
+        method="POST"
+        class="flex w-3/5 select-none flex-col gap-5 rounded-3xl border-y-2 border-white p-7"
+      >
+        <h1
+          class="text-center font-script text-3xl font-bold drop-shadow-[0_0px_8px_rgb(255,255,255)]"
+        >
+          New Message
+        </h1>
+        <h2 class="font-mono drop-shadow-[0_0px_8px_rgb(255,255,255)]">
+          Send what's on your mind!
+        </h2>
+        <div class="flex flex-col gap-5 px-2">
+          <div class="flex flex-col gap-1">
+            <label
+              for="username"
+              class="drop-shadow-[0_0px_8px_rgb(255,255,255)]"
+              >Username <span class="text-white">*</span></label
+            >
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              class="rounded-md px-4 py-2 text-black outline-none"
+              required
+            />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label
+              for="messageText"
+              class="drop-shadow-[0_0px_8px_rgb(255,255,255)]"
+              >Message <span class="text-white">*</span>
+            </label>
+            <input
+              type="text"
+              name="messageText"
+              placeholder="Message"
+              class="rounded-md px-4 py-2 text-black outline-none"
+              required
+            />
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="rounded-xl border-2 border-white px-4 py-2 font-mono text-base font-bold drop-shadow-[0_0px_8px_rgb(255,255,255)] transition-all duration-200 hover:scale-110 hover:shadow-md hover:shadow-white"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
