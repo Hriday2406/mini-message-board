@@ -8,7 +8,7 @@ const messages = [
   },
   {
     id: 1,
-    user: "Musical Gamer",
+    user: "Jubin NaughtyLaal",
     text: "Agar Lara Dutta ki shaadi Brian Lara se ho jaye, to shaadi ke baad uska naam kya hoga? XD",
     added: new Date(),
     // added: "15:35 - 21/12/2024",
@@ -58,29 +58,22 @@ async function getMessage(id) {
   return messages.find((msg) => msg.id === id);
 }
 
-// async function getAllMessages() {
-//   const temp = [];
-//   messages.forEach((msg) => temp.push(msg.text));
-// }
-
-// async function getAllUsers() {
-//   const temp = [];
-//   messages.forEach((msg) => temp.push(msg.user));
-// }
-
 async function addNewMessage(user, text) {
-  messages.push({
-    id: messages[messages.length - 1].id + 1,
-    user: user,
-    text: text,
-    added: new Date(),
-  });
+  try {
+    messages.push({
+      id: messages[messages.length - 1].id + 1,
+      user: user,
+      text: text,
+      added: new Date(),
+    });
+    return true;
+  } catch (err) {
+    throw new Error(err);
+  }
 }
 
 module.exports = {
   getMessages,
   getMessage,
-  // getAllMessages,
-  // getAllUsers,
   addNewMessage,
 };
