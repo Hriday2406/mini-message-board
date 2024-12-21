@@ -19,7 +19,7 @@ const messages = [
   },
   {
     id: 3,
-    user: "Billy Butcher",
+    user: "Chiaa",
     text: "Chalo guys tum enjoy karo, mai jaa raha hun sone. Good night :)",
     added: new Date("July 01, 2024 12:30:00"),
   },
