@@ -13,7 +13,7 @@ const messages = [
   },
   {
     id: 2,
-    user: "Tasha",
+    user: "Kansaa",
     text: "Meow Meow Meow Meow T_T",
     added: new Date("January 13, 2024 12:30:00"),
   },
@@ -27,7 +27,7 @@ const messages = [
     id: 4,
     user: "Model",
     text: "Nikhil Kya bollee hoo!! XD",
-    added: new Date("February 13, 2024 12:30:00"),
+    added: new Date("February 12, 2024 12:30:00"),
   },
   {
     id: 5,
