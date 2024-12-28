@@ -1,4 +1,4 @@
-const db = require("../models/db");
+const db = require("../models/queries");
 const asyncHandler = require("express-async-handler");
 const { body, validationResult } = require("express-validator");
 
@@ -6,11 +6,11 @@ const newPostHandler = [
   [
     body("username")
       .trim()
-      .isLength({ max: 20 })
+      .isLength({ min: 1, max: 20 })
       .withMessage("Username should be less than 20 characters."),
     body("messageText")
       .trim()
-      .isLength({ max: 200 })
+      .isLength({ min: 1, max: 200 })
       .withMessage("Message should not be more than 200 words."),
   ],
   asyncHandler(async (req, res) => {
