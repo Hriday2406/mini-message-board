@@ -7,7 +7,8 @@ async function getAllMessages() {
 
 async function addNewMessage(username, message) {
   try {
-    let added = new Date();
+    let date = new Date();
+    let added = date.toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
     await pool.query(
       "INSERT INTO messages (username, text, added) VALUES ($1, $2, $3)",
       [username, message, added],
